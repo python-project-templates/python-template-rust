@@ -1,0 +1,19 @@
+[package]
+name = "rust_template_py"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[lib]
+name = "rust_template"
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+rust_template = { path = "./rust", version = "*" }
+pyo3 = { version = "0.19", features = ["abi3-py37", "extension-module", "multiple-pymethods"] }
+strum = "0.24.1"
+
+[profile.release]
+panic = 'abort'
+lto = true
