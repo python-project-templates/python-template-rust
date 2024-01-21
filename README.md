@@ -2,8 +2,7 @@
 
 A Python/Rust project template.
 
-
-[![Build Status](https://github.com/python-project-templates/rust/workflows/Build%20Status/badge.svg?branch=main)](https://github.com/python-project-templates/rust/actions?query=workflow%3A%22Build+Status%22)
+[![Build Status](https://github.com/python-project-templates/rust/actions/workflows/build.yml/badge.svg?branch=main)](https://github.com/python-project-templates/rust/actions/workflows/build.yml)
 [![codecov](https://codecov.io/gh/python-project-templates/rust/branch/main/graph/badge.svg)](https://codecov.io/gh/python-project-templates/rust)
 [![License](https://img.shields.io/github/license/python-project-templates/rust)](https://github.com/python-project-templates/rust)
 [![PyPI](https://img.shields.io/pypi/v/rust_template.svg)](https://pypi.python.org/pypi/rust_template)
