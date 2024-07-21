@@ -1,12 +1,12 @@
 [package]
 name = "rust_template"
 version = "0.1.0"
-authors = ["timkpaine <t.paine154@gmail.com>"]
+authors = ["Python Project Template Authors <t.paine154@gmail.com>"]
 edition = "2021"
 license = "Apache-2.0"
 readme = "../README.md"
-repository = "https://github.com/python-project-templates/rust"
-description = "A Python/Rust project template"
+repository = "https://github.com/python-project-templates/rust template"
+description = ""
 
 [lib]
 name = "rust_template"

@@ -3,32 +3,38 @@ requires = ["maturin>=1,<2"]
 build-backend = "maturin"
 
 [project]
-name = "rust_template"
-authors = [{name = "Tim Paine", email = "t.paine154@gmail.com"}]
-description="A Python/Rust project template"
-version = "0.1.0"
+name = "rust-template"
+authors = [{name = "Python Project Template Authors", email = "t.paine154@gmail.com"}]
+description="A Rust-Python project template"
 readme = "README.md"
-license = { file = "LICENSE" }
-requires-python = ">=3.7"
+license = { text = "Apache-2.0" }
+version = "0.1.0"
+requires-python = ">=3.9"
+keywords = []
+
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Programming Language :: Rust",
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
 ]
-keywords = []
+
 dependencies = []
+
+[project.urls]
+Repository = "https://github.com/python-project-templates/rust-template"
+Homepage = "https://github.com/python-project-templates/rust-template"
 
 [project.optional-dependencies]
 develop = [
-    "black>=23",
-    "bump2version",
+    "build",
+    "bump-my-version",
     "check-manifest",
     "maturin>=1,<2",
     "pytest",
@@ -37,30 +43,59 @@ develop = [
     "twine",
     "wheel",
 ]
-test = [
-    "pytest",
-    "pytest-cov",
-]
 
-[project.urls]
-Repository = "https://github.com/python-project-templates/rust"
-Homepage = "https://github.com/python-project-templates/rust"
+[project.scripts]
 
-[tool.black]
-color = true
-line-length = 150
-target-version = ["py310"]
-skip-string-normalization = true
+[tool.bumpversion]
+current_version = "0.1.0"
+commit = true
+tag = true
+
+[[tool.bumpversion.files]]
+filename = "rust_template/__init__.py"
+search = '__version__ = "{current_version}"'
+replace = '__version__ = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "Cargo.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "rust/Cargo.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
 
 [tool.check-manifest]
-ignore = []
-
-[tool.ruff]
-line-length = 150
-
-[tool.ruff.per-file-ignores]
-"__init__.py" = ["F401", "F403"]
+ignore = [
+    ".copier-answers.yml",
+    "Makefile",
+    "setup.py",
+    "rust/Cargo.lock",
+]
 
 [tool.pytest.ini_options]
 asyncio_mode = "strict"
 testpaths = "rust_template/tests"
+
+[tool.ruff]
+line-length = 150
+
+[tool.ruff.lint.isort]
+combine-as-imports = true
+default-section = "third-party"
+known-first-party = ["rust_template"]
+section-order = [
+    "future",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"__init__.py" = ["F401"]
