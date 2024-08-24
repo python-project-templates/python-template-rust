@@ -41,7 +41,7 @@ lint-py:  ## run python linter with ruff
 	python -m ruff check rust_template
 	python -m ruff format --check rust_template
 
-lint-rust:  ## run the ruff linter
+lint-rust:  ## run the rust linter
 	make -C rust lint
 
 lint: lint-rust lint-py  ## run project linters
