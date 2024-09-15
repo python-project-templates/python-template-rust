@@ -4,7 +4,7 @@ build-backend = "maturin"
 
 [project]
 name = "rust-template"
-authors = [{name = "Python Project Template Authors", email = "t.paine154@gmail.com"}]
+authors = [{name = "Python Project Template Authors", email = "3105306+timkpaine@users.noreply.github.com"}]
 description="A Rust-Python project template"
 readme = "README.md"
 license = { text = "Apache-2.0" }
@@ -77,6 +77,7 @@ ignore = [
     "Makefile",
     "setup.py",
     "rust/Cargo.lock",
+    "rust/README.md",
 ]
 
 [tool.pytest.ini_options]
@@ -86,17 +87,14 @@ testpaths = "rust_template/tests"
 [tool.ruff]
 line-length = 150
 
+[tool.ruff.lint]
+extend-select = ["I"]
+
 [tool.ruff.lint.isort]
 combine-as-imports = true
 default-section = "third-party"
 known-first-party = ["rust_template"]
-section-order = [
-    "future",
-    "standard-library",
-    "third-party",
-    "first-party",
-    "local-folder",
-]
+section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
 
 [tool.ruff.lint.per-file-ignores]
 "__init__.py" = ["F401"]
