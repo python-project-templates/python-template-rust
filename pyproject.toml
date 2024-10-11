@@ -100,8 +100,6 @@ archs = "x86_64 arm64"
 environment = {PATH="$UserProfile\\.cargo\bin;$PATH"}
 archs = "AMD64 x86"
 
-<<<<<<< before updating
-=======
 [tool.coverage.run]
 branch = true
 omit = [
@@ -116,7 +114,6 @@ exclude_also = [
 ignore_errors = true
 fail_under = 50
 
->>>>>>> after updating
 [tool.pytest.ini_options]
 addopts = ["-vvv", "--junitxml=junit.xml"]
 asyncio_mode = "strict"
