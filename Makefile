@@ -83,11 +83,7 @@ annotate:  ## run python type annotation checks with mypy
 #########
 .PHONY: test-py tests-py coverage-py
 test-py:  ## run python tests
-<<<<<<< before updating
-	python -m pytest -v rust_template/tests --junitxml=junit.xml
-=======
 	python -m pytest -v rust_template/tests
->>>>>>> after updating
 
 # alias
 tests-py: test-py
