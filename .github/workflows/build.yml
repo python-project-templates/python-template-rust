@@ -111,21 +111,13 @@ jobs:
         make dist-py-sdist
         make dist-py-wheel
         make dist-check
-<<<<<<< before updating
-      if: ${{ matrix.os == 'ubuntu-latest' }}
-=======
       if: matrix.os == 'ubuntu-latest'
->>>>>>> after updating
 
     - name: Make dist
       run: |
         make dist-py-wheel
         make dist-check
-<<<<<<< before updating
-      if: ${{ matrix.os != 'ubuntu-latest' }}
-=======
       if: matrix.os != 'ubuntu-latest'
->>>>>>> after updating
 
     - uses: actions/upload-artifact@v4
       with:
