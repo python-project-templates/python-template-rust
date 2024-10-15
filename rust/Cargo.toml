@@ -1,15 +1,15 @@
 [package]
-name = "rust_template"
+name = "python_template_rust"
 version = "0.1.0"
 authors = ["Python Project Template Authors <3105306+timkpaine@users.noreply.github.com>"]
 edition = "2021"
 license = "Apache-2.0"
 readme = "../README.md"
-repository = "https://github.com/python-project-templates/rust template"
+repository = "https://github.com/python-project-templates/python template rust"
 description = ""
 
 [lib]
-name = "rust_template"
+name = "python_template_rust"
 path = "src/lib.rs"
 crate-type = ["rlib"]
 

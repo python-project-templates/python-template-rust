@@ -1,12 +1,12 @@
-# rust template
+# python template rust
 
 A Rust-Python project template
 
-[![Build Status](https://github.com/python-project-templates/rust-template/actions/workflows/build.yml/badge.svg?branch=main&event=push)](https://github.com/python-project-templates/rust-template/actions/workflows/build.yml)
-[![codecov](https://codecov.io/gh/python-project-templates/rust-template/branch/main/graph/badge.svg)](https://codecov.io/gh/python-project-templates/rust-template)
-[![License](https://img.shields.io/github/license/python-project-templates/rust-template)](https://github.com/python-project-templates/rust-template)
-[![PyPI](https://img.shields.io/pypi/v/rust-template.svg)](https://pypi.python.org/pypi/rust-template)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/python-project-templates/rust-template/main?urlpath=lab)
+[![Build Status](https://github.com/python-project-templates/python-template-rust/actions/workflows/build.yml/badge.svg?branch=main&event=push)](https://github.com/python-project-templates/python-template-rust/actions/workflows/build.yml)
+[![codecov](https://codecov.io/gh/python-project-templates/python-template-rust/branch/main/graph/badge.svg)](https://codecov.io/gh/python-project-templates/python-template-rust)
+[![License](https://img.shields.io/github/license/python-project-templates/python-template-rust)](https://github.com/python-project-templates/python-template-rust)
+[![PyPI](https://img.shields.io/pypi/v/python-template-rust.svg)](https://pypi.python.org/pypi/python-template-rust)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/python-project-templates/python-template-rust/main?urlpath=lab)
 
 ## Overview
 
