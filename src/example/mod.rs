@@ -1,6 +1,6 @@
 use pyo3::prelude::*;
 
-use rust_template::Example as BaseExample;
+use python_template_rust::Example as BaseExample;
 
 
 #[pyclass]

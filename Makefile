@@ -28,9 +28,9 @@ install:  ## install python library
 
 UNAME := $(shell uname)
 ifeq ($(UNAME), Darwin)
-	_CP_COMMAND := cp target/debug/librust_template.dylib rust_template/rust_template.abi3.so
+	_CP_COMMAND := cp target/debug/libpython_template_rust.dylib python_template_rust/python_template_rust.abi3.so
 else
-	_CP_COMMAND := cp target/debug/librust_template.so rust_template/rust_template.abi3.so
+	_CP_COMMAND := cp target/debug/libpython_template_rust.so python_template_rust/python_template_rust.abi3.so
 endif
 
 #########
@@ -38,8 +38,8 @@ endif
 #########
 .PHONY: lint-py lint-rust lint lints
 lint-py:  ## run python linter with ruff
-	python -m ruff check rust_template
-	python -m ruff format --check rust_template
+	python -m ruff check python_template_rust
+	python -m ruff format --check python_template_rust
 
 lint-rust:  ## run rust linter
 	make -C rust lint
@@ -51,8 +51,8 @@ lints: lint
 
 .PHONY: fix-py fix-rust fix format
 fix-py:  ## fix python formatting with ruff
-	python -m ruff check --fix rust_template
-	python -m ruff format rust_template
+	python -m ruff check --fix python_template_rust
+	python -m ruff format python_template_rust
 
 fix-rust:  ## fix rust formatting
 	make -C rust fix
@@ -76,20 +76,20 @@ checks: check-manifest
 check: checks
 
 annotate:  ## run python type annotation checks with mypy
-	python -m mypy ./rust_template
+	python -m mypy ./python_template_rust
 
 #########
 # TESTS #
 #########
 .PHONY: test-py tests-py coverage-py
 test-py:  ## run python tests
-	python -m pytest -v rust_template/tests
+	python -m pytest -v python_template_rust/tests
 
 # alias
 tests-py: test-py
 
 coverage-py:  ## run python tests and collect test coverage
-	python -m pytest -v rust_template/tests --cov=rust_template --cov-report term-missing --cov-report xml
+	python -m pytest -v python_template_rust/tests --cov=python_template_rust --cov-report term-missing --cov-report xml
 
 .PHONY: test-rust tests-rust coverage-rust
 test-rust:  ## run rust tests
