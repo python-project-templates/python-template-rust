@@ -15,6 +15,7 @@ keywords = []
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Programming Language :: Rust",
+    "Programming Language :: Python",
     "Programming Language :: Python :: Implementation :: CPython",
     "Programming Language :: Python :: Implementation :: PyPy",
     "Programming Language :: Python :: 3",
@@ -25,10 +26,6 @@ classifiers = [
 ]
 
 dependencies = []
-
-[project.urls]
-Repository = "https://github.com/python-project-templates/python-template-rust"
-Homepage = "https://github.com/python-project-templates/python-template-rust"
 
 [project.optional-dependencies]
 develop = [
@@ -45,6 +42,10 @@ develop = [
 ]
 
 [project.scripts]
+
+[project.urls]
+Repository = "https://github.com/python-project-templates/python-template-rust"
+Homepage = "https://github.com/python-project-templates/python-template-rust"
 
 [tool.bumpversion]
 current_version = "0.1.0"
