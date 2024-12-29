@@ -5,7 +5,7 @@ build-backend = "maturin"
 [project]
 name = "python-template-rust"
 authors = [{name = "Python Project Template Authors", email = "3105306+timkpaine@users.noreply.github.com"}]
-description="A Rust-Python project template"
+description = "A Rust-Python project template"
 readme = "README.md"
 license = { text = "Apache-2.0" }
 version = "0.1.0"
