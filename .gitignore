@@ -139,10 +139,13 @@ js/dist
 js/lib
 js/node_modules
 js/*.tgz
+python_template_rust/extension
 
 # Jupyter
 .ipynb_checkpoints
 .autoversion
+!python_template_rust/extension/python_template_rust.json
+!python_template_rust/extension/install.json
 python_template_rust/nbextension
 python_template_rust/labextension
 
