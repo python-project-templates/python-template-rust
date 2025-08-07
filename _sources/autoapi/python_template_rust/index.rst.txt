@@ -1,0 +1,21 @@
+python_template_rust
+====================
+
+.. py:module:: python_template_rust
+
+
+Attributes
+----------
+
+.. autoapisummary::
+
+   python_template_rust.__version__
+
+
+Package Contents
+----------------
+
+.. py:data:: __version__
+   :value: '0.1.0'
+
+
