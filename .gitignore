@@ -146,6 +146,7 @@ python_template_rust/extension
 # Jupyter
 .ipynb_checkpoints
 .autoversion
+Untitled*.ipynb
 !python_template_rust/extension/python_template_rust.json
 !python_template_rust/extension/install.json
 python_template_rust/nbextension
