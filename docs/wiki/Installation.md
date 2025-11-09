@@ -1,6 +1,6 @@
 ## Pre-requisites
 
-You need Python >=3.9 on your machine to install `python-template-rust`.
+You need Python >=3.10 on your machine to install `python-template-rust`.
 
 ## Install with `pip`
 
