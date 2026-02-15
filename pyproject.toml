@@ -1,10 +1,15 @@
 [build-system]
-requires = ["hatchling", "hatch-rs>=0.1.4"]
+requires = [
+    "hatchling",
+    "hatch-rs>=0.1.4",
+]
 build-backend="hatchling.build"
 
 [project]
 name = "python-template-rust"
-authors = [{name = "Python Project Template Authors", email = "3105306+timkpaine@users.noreply.github.com"}]
+authors = [
+    {name = "Python Project Template Authors", email = "3105306+timkpaine@users.noreply.github.com"},
+]
 description = "A Rust-Python project template"
 readme = "README.md"
 license = { text = "Apache-2.0" }
@@ -43,6 +48,8 @@ develop = [
     "pytest-cov",
     "ruff>=0.9,<0.15",
     "twine",
+    "ty",
+    "uv",
     "wheel",
 ]
 
@@ -93,7 +100,7 @@ ignore = [
 [tool.cibuildwheel]
 build = "cp310-*"
 test-command = "pytest -vvv {project}/python_template_rust/tests"
-test-requires = ["pytest", "pytest-cov", "pytest-sugar", "pytest-xdist"]
+test-extras = "develop"
 
 [tool.cibuildwheel.linux]
 before-all = """
@@ -143,27 +150,58 @@ module = "python_template_rust"
 path = "."
 
 [tool.hatch.build.targets.sdist]
-packages = ["python_template_rust", "/rust", "/src"]
-sources = ["."]
+packages = [
+    "python_template_rust",
+    "/rust",
+    "/src",
+]
+sources = [
+    ".",
+]
 
 [tool.hatch.build.targets.wheel]
-packages = ["python_template_rust"]
+packages = [
+    "python_template_rust",
+]
 
 [tool.pytest.ini_options]
-addopts = ["-vvv", "--junitxml=junit.xml"]
+addopts = [
+    "-vvv",
+    "--junitxml=junit.xml",
+]
 testpaths = "python_template_rust/tests"
 
 [tool.ruff]
 line-length = 150
 
 [tool.ruff.lint]
-extend-select = ["I"]
+extend-select = [
+    "I",
+]
 
 [tool.ruff.lint.isort]
 combine-as-imports = true
 default-section = "third-party"
-known-first-party = ["python_template_rust"]
-section-order = ["future", "standard-library", "third-party", "first-party", "local-folder"]
+known-first-party = [
+    "python_template_rust",
+]
+section-order = [
+    "future",
+    "standard-library",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
 
 [tool.ruff.lint.per-file-ignores]
-"__init__.py" = ["F401", "F403"]
+"__init__.py" = [
+    "F401",
+    "F403",
+]
+
+[tool.yardang]
+title = "python template rust"
+root = "README.md"
+pages = []
+use-autoapi = true
+
