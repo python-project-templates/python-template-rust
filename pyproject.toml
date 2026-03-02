@@ -113,6 +113,7 @@ branch = true
 omit = [
     "python_template_rust/tests/integration/",
 ]
+
 [tool.coverage.report]
 exclude_also = [
     "raise NotImplementedError",
@@ -134,6 +135,7 @@ src = "/"
 
 [tool.hatch.build.hooks.hatch-rs]
 verbose = true
+abi3 = true
 module = "python_template_rust"
 path = "."
 
