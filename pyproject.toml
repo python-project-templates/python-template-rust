@@ -125,9 +125,9 @@ fail_under = 50
 
 [tool.hatch.build]
 artifacts = [
-    "project/*.dll",
-    "project/*.dylib",
-    "project/*.so",
+    "python_template_rust/*.dll",
+    "python_template_rust/*.dylib",
+    "python_template_rust/*.so",
 ]
 
 [tool.hatch.build.sources]
