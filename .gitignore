@@ -142,6 +142,8 @@ python_template_rust/labextension
 
 # Emscripten SDK (locally installed)
 emsdk
+.pyodide_build/
+
 
 # Mac
 .DS_Store
