@@ -1,0 +1,19 @@
+python_template_rust.tests.test_all
+===================================
+
+.. py:module:: python_template_rust.tests.test_all
+
+
+Functions
+---------
+
+.. autoapisummary::
+
+   python_template_rust.tests.test_all.test_all
+
+
+Module Contents
+---------------
+
+.. py:function:: test_all()
+

@@ -4,6 +4,15 @@ python_template_rust
 .. py:module:: python_template_rust
 
 
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 1
+
+   /autoapi/python_template_rust/tests/index
+
+
 Attributes
 ----------
 
