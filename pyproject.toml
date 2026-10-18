@@ -42,6 +42,7 @@ develop = [
     "hatch-rs>=0.3.0",
     "hatchling",
     "mdformat",
+    "mdformat-frontmatter",
     "mdformat-tables>=1",
     "pytest",
     "pytest-cov",
@@ -65,7 +66,8 @@ tag = true
 commit_args = "-s"
 pre_commit_hooks = [
     "cargo update --workspace",
-    "git add Cargo.lock",
+    "cargo update --manifest-path rust/Cargo.toml --workspace",
+    "git add Cargo.lock rust/Cargo.lock",
 ]
 
 [[tool.bumpversion.files]]
@@ -121,7 +123,7 @@ xbuild-tools = ["cargo", "rustc", "rustup"]
 [tool.coverage.run]
 branch = true
 omit = [
-    "python_template_rust/tests/integration/",
+    "python_template_rust/tests/integration/*",
 ]
 
 [tool.coverage.report]
@@ -132,13 +134,6 @@ exclude_also = [
 ]
 ignore_errors = true
 fail_under = 50
-
-[tool.hatch.build]
-artifacts = [
-    "python_template_rust/*.dll",
-    "python_template_rust/*.dylib",
-    "python_template_rust/*.so",
-]
 
 [tool.hatch.build.sources]
 src = "/"
@@ -157,11 +152,20 @@ packages = [
     "Cargo.lock",
 ]
 exclude = [
+    "*.dll",
+    "*.dylib",
+    "*.so",
+    "*.pyd",
     "rust/Makefile",
     "target",
 ]
 
 [tool.hatch.build.targets.wheel]
+artifacts = [
+    "python_template_rust/*.dll",
+    "python_template_rust/*.dylib",
+    "python_template_rust/*.so",
+]
 packages = [
     "python_template_rust",
 ]
