@@ -10,6 +10,7 @@ Submodules
 .. toctree::
    :maxdepth: 1
 
+   /autoapi/python_template_rust/python_template_rust/index
    /autoapi/python_template_rust/tests/index
 
 
